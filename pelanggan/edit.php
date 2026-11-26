@@ -1,4 +1,10 @@
 <?php
+session_start();
+if (!isset($_SESSION['login']) || $_SESSION['login'] !== true) {
+    header("Location: ../login.php");
+    exit;
+}
+
 include '../koneksi.php';
 
 $id = $_GET['id'];
@@ -68,6 +74,7 @@ if (isset($_POST['update'])) {
 <html>
 <head>
     <title>Edit Pelanggan</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 
@@ -103,6 +110,5 @@ if (isset($_POST['update'])) {
     <a href="index.php">Kembali</a>
 
 </form>
-
 </body>
 </html>

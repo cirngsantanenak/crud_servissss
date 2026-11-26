@@ -11,6 +11,11 @@ CREATE TABLE if not exists servis (
     status_servis ENUM('Proses', 'Selesai'),
     jenis_perangkat VARCHAR(30)
 );
+CREATE TABLE if not exists pelanggan (
+    id_pelanggan INT AUTO_INCREMENT PRIMARY KEY,
+    nama_pelanggan VARCHAR(100),
+    gambar VARCHAR(255)
+);
 
 INSERT INTO servis(no_nota, nama_pelanggan, biaya, keluhan, status_servis, jenis_perangkat)VALUES
 ('15','Jemes','990000','jelek jaringannya','selesai','jaringan'),

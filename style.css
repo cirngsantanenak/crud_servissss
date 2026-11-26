@@ -1,0 +1,291 @@
+/* WARNA UTAMA */
+:root {
+    --bg: #f8f6ff;
+    --white: #ffffff;
+    --purple: #958bd0;
+    --purple-dark: #756bad;
+    --purple-light: #efedff;
+    --pink-light: #fff1f6;
+    --text: #55516d;
+    --border: #e8e2f1;
+    --shadow: 0 5px 16px rgba(100, 88, 145, .09);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 32px 20px;
+    background: var(--bg);
+    color: var(--text);
+    font: 15px/1.6 "Segoe UI", Arial, sans-serif;
+}
+
+h1, h2, h3 {
+    color: #70679f;
+    text-align: center;
+}
+
+a {
+    color: var(--purple-dark);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #5f5598;
+}
+
+/* index.php — HALAMAN UTAMA */
+body > p {
+    text-align: center;
+}
+
+body > p a, .menu-link {
+    display: inline-block;
+    margin: 7px 5px;
+    padding: 11px 20px;
+    border: 1px solid #ded8f0;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #fff, var(--purple-light));
+    box-shadow: var(--shadow);
+}
+
+body > p a:hover, .menu-link:hover {
+    background: var(--pink-light);
+}
+
+/* index.php — PENCARIAN SERVIS */
+form.search-form {
+    width: 100% !important;
+    max-width: 1150px !important;
+    box-sizing: border-box;
+    margin: 20px auto;
+    padding: 15px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: linear-gradient(120deg, #fff, var(--purple-light), var(--pink-light));
+    box-shadow: var(--shadow);
+}
+
+/* index.php & pelanggan/index.php — TABEL */
+table {
+    width: 100%;
+    max-width: 1100px;
+    margin: 22px auto;
+    border-collapse: separate;
+    border-spacing: 0 7px;
+}
+
+th {
+    padding: 12px;
+    background: #eae7fb;
+    color: #6d659c;
+    text-align: left;
+}
+
+th:first-child {
+    border-radius: 10px 0 0 10px;
+}
+
+th:last-child {
+    border-radius: 0 10px 10px 0;
+}
+
+td {
+    padding: 12px;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    background: var(--white);
+    vertical-align: middle;
+    box-shadow: 0 3px 9px rgba(100, 88, 145, .06);
+}
+
+td:first-child {
+    border-left: 1px solid var(--border);
+    border-radius: 10px 0 0 10px;
+}
+
+td:last-child {
+    border-right: 1px solid var(--border);
+    border-radius: 0 10px 10px 0;
+}
+
+tbody tr:hover td {
+    background: #fcfaff;
+}
+
+/* index.php & pelanggan/index.php — EDIT/HAPUS */
+td a[href*="edit"], td a[href*="hapus"], td a[href*="delete"] {
+    display: inline-block;
+    margin: 2px;
+    padding: 5px 10px;
+    border: 1px solid #dcd5ee;
+    border-radius: 8px;
+    background: var(--purple-light);
+    box-shadow: 0 2px 6px rgba(100, 88, 145, .07);
+}
+
+td a[href*="hapus"], td a[href*="delete"] {
+    border-color: #f0d5df;
+    background: var(--pink-light);
+    color: #b87591;
+}
+
+/* tambah.php & edit.php — FORM SERVIS */
+/* pelanggan/tambah.php — FORM TAMBAH PELANGGAN */
+/* pelanggan/edit.php — FORM EDIT PELANGGAN */
+form {
+    width: 100%;
+    max-width: 650px;
+    margin: 22px auto;
+    padding: 25px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: linear-gradient(145deg, #fff, #faf8ff, #fff7fb);
+    box-shadow: var(--shadow);
+}
+
+form label {
+    display: inline-block;
+    margin-bottom: 6px;
+    color: #6c668f;
+    font-weight: 600;
+}
+
+input[type="text"], input[type="number"], input[type="date"],
+input[type="file"], input[type="password"], textarea, select {
+    width: 100%;
+    max-width: 100%;
+    min-height: 42px;
+    margin-bottom: 12px;
+    padding: 10px 12px;
+    border: 1px solid #e2ddef;
+    border-radius: 9px;
+    outline: none;
+    background: #fff;
+    color: var(--text);
+    font: inherit;
+}
+
+textarea {
+    min-height: 95px;
+    resize: vertical;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: var(--purple);
+    box-shadow: 0 0 0 3px rgba(149, 139, 208, .15);
+}
+
+input[type="file"] {
+    background: var(--pink-light);
+}
+
+input[type="radio"], input[type="checkbox"] {
+    accent-color: var(--purple);
+}
+
+/* FORM — TOMBOL SIMPAN/CARI */
+button, input[type="submit"], input[type="button"] {
+    margin: 5px 3px;
+    padding: 10px 17px;
+    border: 1px solid var(--purple-dark);
+    border-radius: 9px;
+    background: var(--purple);
+    color: #fff;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(117, 107, 178, .16);
+}
+
+button:hover, input[type="submit"]:hover, input[type="button"]:hover {
+    background: var(--purple-dark);
+}
+
+/* pelanggan/index.php — KELOLA PELANGGAN */
+body > div {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+td img, form img {
+    max-width: 100px;
+    height: auto;
+    border: 3px solid #f2eafa;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(100, 88, 145, .10);
+}
+/* pelanggan/tambah.php — FORM TAMBAH PELANGGAN */
+
+body > div {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 25px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: var(--shadow);
+}
+
+body > div h2 {
+    margin-bottom: 25px;
+}
+
+form div {
+    margin-bottom: 12px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+form input[type="text"],
+form input[type="file"] {
+    width: 100%;
+    display: block;
+}
+
+form button {
+    margin-top: 10px;
+}
+
+form a {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 10px 17px;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    background: var(--pink-light);
+}
+
+/* RESPONSIVE — LAYAR KECIL */
+@media (max-width: 700px) {
+    body {
+        padding: 22px 12px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    form {
+        padding: 18px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}

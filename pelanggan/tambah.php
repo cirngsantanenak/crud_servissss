@@ -1,4 +1,10 @@
 <?php
+session_start();
+if (!isset($_SESSION['login']) || $_SESSION['login'] !== true) {
+    header("Location: ../login.php");
+    exit;
+}
+
 include '../koneksi.php';
 
 if(isset($_POST['submit'])) {
@@ -31,6 +37,7 @@ if(isset($_POST['submit'])) {
 <html>
 <head>
     <title>Tambah Pelanggan</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 <div>
